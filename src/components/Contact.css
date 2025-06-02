@@ -1,0 +1,115 @@
+:root {
+  --primary-bg: #0a211f;
+  --accent: #d8ff85;
+  --text-light: #fff;
+  --text-dark: #0a211f;
+}
+
+.contact-section {
+  background-color: var(--primary-bg);
+  padding: 4rem 1rem;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.contact-header {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Contact Form */
+.contact-form {
+  background-color: #fff;
+  color: var(--text-dark);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.contact-submit {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--accent);
+  color: var(--text-dark);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-submit:hover {
+  background-color: #bcd39c;
+}
+
+/* Social Media Icons */
+.social-media {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.social-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--primary-bg);
+  transition: fill 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #bcd39c;
+}
+
+.social-icon:hover svg {
+  fill: var(--text-dark);
+}

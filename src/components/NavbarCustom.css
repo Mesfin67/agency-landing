@@ -1,0 +1,164 @@
+
+/* MOBILE TOGGLER: Two horizontal bars by default */
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  transition: transform 0.5s ease;
+  z-index: 9999; 
+}
+
+/* Toggler Bars */
+.bar {
+  height: 4px;
+  background-color: #d8ff85;
+  border-radius: 2px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Top bar: full width */
+#bar1 {
+  width: 100%;
+}
+
+/* Bottom bar: 60% width */
+#bar2 {
+  width: 60%;
+}
+
+
+/* NAVBAR CONTAINER */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* NAVBAR BASE */
+.navbar {
+  background-color: transparent;
+  padding: 2rem 0;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  position: relative;
+  z-index: 999; 
+}
+
+.navbar-scrolled {
+  background-color: #0a211f;
+  padding: 2.5rem 0;
+}
+
+/* BRAND */
+.nav-brand {
+  flex: 1;
+  text-align: center;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-size: 2.5rem;
+  font-family: "Lobster", cursive;
+  text-decoration: none;
+}
+
+/* NAVIGATION LINKS */
+.nav-links {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-links .nav-link {
+  color: #fff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links .nav-link:hover,
+.nav-links .nav-link.active {
+  color: #d8ff85;
+}
+
+/* CONTACT BUTTON */
+.nav-buttons {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn.demo-btn {
+  background-color: #d8ff85;
+  color: #0a211f;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 100%;
+  text-decoration: none;
+  margin: 10px;
+  transition: none;
+  z-index: 999;
+}
+.btn.demo-btn.active, .btn.demo-btn.hover  { background-color: #d8ff85;
+  color: #0a211f;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 100%;
+  text-decoration: none;
+  margin: 10px;
+  transition: none;
+  z-index: 999;
+}
+
+/* MOBILE DROPDOWN */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-brand {
+    text-align: left;
+    margin-left: 10px;
+  }
+}
+
+.nav-dropdown {
+  background-color: #0a211f;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.nav-dropdown li {
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.nav-dropdown .nav-link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-dropdown .nav-link:hover,
+.nav-dropdown .nav-link.active {
+  color: #d8ff85;
+}

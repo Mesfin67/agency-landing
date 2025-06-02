@@ -1,0 +1,51 @@
+.portfolio-container {
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 25px;
+}
+.portfolio-container {
+  padding: 2rem; 
+  margin: 5rem auto;
+  width: 100%;
+  background-color: white; 
+}
+
+.portfolio-header {
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: #0a211f;
+}
+
+.portfolio-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.portfolio-filter-button {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #0a211f;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.portfolio-filter-button.active {
+  background-color: #d8ff85;
+  color: #0a211f;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  padding: 4rem;
+}

@@ -1,0 +1,109 @@
+:root {
+  --section-bg: #0a211f;   
+  --card-bg: #ffffff;       
+  --accent: #d8ff85;        
+  --header-color: #ffffff;  
+  --text-dark: #0a211f;     
+}
+
+.testimonial-section {
+  background-color: var(--section-bg);
+  padding: 2rem 1rem;
+  color: var(--header-color);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-header {
+  font-size: 2.8rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 2rem;
+  color: var(--header-color);
+}
+
+/* Carousel wrapper: set a white background so that the sliding cards appear white */
+.testimonial-carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 500px; 
+  margin: 0 auto;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+}
+
+/* The horizontal carousel container */
+.testimonial-carousel {
+  display: flex;
+  gap: 1rem;
+  width: calc(200% + 1rem); 
+  animation: marqueeHorizontal 15s linear infinite;
+}
+
+/* Each testimonial card: completely white with accent border */
+.testimonial-card {
+  flex: 0 0 calc((100% - 1rem) / 2);
+  background-color: var(--card-bg);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.testimonial-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 0.5rem;
+}
+
+/* Text inside the card: dark color on white background */
+.testimonial-text {
+  font-style: italic;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.testimonial-client {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin: 0;
+  color: var(--text-dark);
+}
+
+/* Gradient overlays for left/right edges (reduced width for less blur) */
+.testimonial-carousel-wrapper::before,
+.testimonial-carousel-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 30px; 
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.testimonial-carousel-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--card-bg), transparent);
+}
+
+.testimonial-carousel-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--card-bg), transparent);
+}
+
+/* Slow horizontal marquee keyframes */
+@keyframes marqueeHorizontal {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}

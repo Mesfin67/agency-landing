@@ -1,0 +1,21 @@
+.footer {
+  background-color: #0a211f;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+ padding-bottom: 30px;
+}
+.footer-nav {
+  margin-bottom: 0.5rem;
+}
+.footer-link {
+  color: #d8ff85;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+.footer-link:hover {
+  color: #fff;
+}
+.footer-copy {
+  font-size: 0.9rem;
+}
